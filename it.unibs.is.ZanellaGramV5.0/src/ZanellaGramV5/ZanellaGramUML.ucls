@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="ZanellaGramV5.Account" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Account.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1371" y="268"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="ZanellaGramV5.Container" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Container.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1390" y="1156"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ZanellaGramV5.Evento" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Evento.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="244" y="594"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ZanellaGramV5.Main" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1501" y="713"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="ZanellaGramV5.Notifica" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Notifica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="980" y="123"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ZanellaGramV5.PartitaDiCalcio" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/PartitaDiCalcio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="816" y="1155"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="7" language="java" name="ZanellaGramV5.Stati" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/Stati.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="684" y="114"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="8" language="java" name="ZanellaGramV5.TorneoDiPoker" project="it.unibs.is.ZanellaGramV5.0" 
+    file="/it.unibs.is.ZanellaGramV5.0/src/ZanellaGramV5/TorneoDiPoker.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="938" y="734"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="9">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="10" name="partecipanti"/>      
+      <multiplicity id="11" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="12">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="13" name="container"/>      
+      <multiplicity id="14" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="15">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="16">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="17" name="accounts"/>      
+      <multiplicity id="18" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="20" name="stato"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="22">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="23" name="propositore"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="26" name="eventi"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="29" name="proposte"/>      
+      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="32" name="tornei"/>      
+      <multiplicity id="33" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="35" name="mioAccount"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="38">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="39" name="partite"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="42" name="notifiche"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
