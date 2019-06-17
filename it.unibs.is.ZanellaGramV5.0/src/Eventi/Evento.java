@@ -1,8 +1,13 @@
-package ZanellaGramV5;
+package Eventi;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Vector;
+
+import Account.Account;
+import Account.Notifica;
+import Main.Stati;
+
 import java.io.*;
 import it.unibs.fp.mylib.Data;
 import it.unibs.fp.mylib.Ora;

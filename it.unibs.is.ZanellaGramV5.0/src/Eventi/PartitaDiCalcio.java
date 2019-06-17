@@ -1,8 +1,9 @@
 
-package ZanellaGramV5;
+package Eventi;
 import java.io.Serializable;
 import java.lang.reflect.Field;
 
+import Account.Account;
 import it.unibs.fp.mylib.Data;
 import it.unibs.fp.mylib.FasciaDiEta;
 import it.unibs.fp.mylib.Ora;

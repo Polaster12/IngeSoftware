@@ -1,10 +1,9 @@
-package ZanellaGramV5;
+package Account;
 
 import java.io.Serializable;
 import java.util.Vector;
 
-import ZanellaGramV5.Evento;
-import ZanellaGramV5.Notifica;
+import Eventi.Evento;
 import it.unibs.fp.mylib.FasciaDiEta;
 
 public class Account implements Serializable{

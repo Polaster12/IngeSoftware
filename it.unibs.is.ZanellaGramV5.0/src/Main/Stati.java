@@ -1,4 +1,4 @@
-package ZanellaGramV5;
+package Main;
 
 public enum Stati {
 	

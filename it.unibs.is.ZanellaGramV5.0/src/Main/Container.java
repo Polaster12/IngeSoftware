@@ -1,7 +1,11 @@
-package ZanellaGramV5;
+package Main;
 
 import java.io.Serializable;
 import java.util.Vector;
+
+import Account.Account;
+import Eventi.PartitaDiCalcio;
+import Eventi.TorneoDiPoker;
 
 public class Container implements Serializable {
 	

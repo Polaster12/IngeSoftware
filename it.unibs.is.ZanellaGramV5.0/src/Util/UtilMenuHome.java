@@ -1,21 +1,22 @@
-package ZanellaGramV5;
+package Util;
 
+import Main.Dati;
 import it.unibs.fp.mylib.MyMenu;
 
-public class UtilMenu1 {
+public class UtilMenuHome {
 	
 	private static final String titolo1 = "HOME";
 	private static final String[] voci1 = {"Categorie","Profilo"};
 	private static MyMenu menu1 = new MyMenu(titolo1,voci1,true);
 	
-	public static void menu1() {
+	public static void menuHome(Dati dati) {
 		int i;
 		do{
 			i = menu1.scegli();
 			switch(i) {
-				case 1:UtilMenu2.menu2();
+				case 1:UtilMenuCategorie.menuCategorie(dati);
 					break;
-				case 2:UtilMenuProfilo.menuProfilo();
+				case 2:UtilMenuProfilo.menuProfilo(dati);
 					break;
 			}      
 		}while(i!=0);
