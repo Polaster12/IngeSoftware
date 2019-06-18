@@ -1,11 +1,12 @@
-package Util;
+package Controller;
+
+import java.util.Vector;
 
 import Account.Notifica;
+import DBMS.Dati;
 import Eventi.Evento;
-import Main.Dati;
-import Main.Main;
-import Main.Stati;
-import it.unibs.fp.mylib.BelleStringhe;
+import Eventi.Stati;
+import View.UtilView;
 import it.unibs.fp.mylib.MyMenu;
 
 public class UtilMenuProfilo {
@@ -54,10 +55,10 @@ public class UtilMenuProfilo {
 			dati.getMioAccount().getEvento(i).removeAmmontari(dati.getMioAccount().getEvento(i).PartecipantiIndexOf(dati.getMioAccount()));
 			dati.getMioAccount().getEvento(i).removePartecipante(dati.getMioAccount());
 			dati.getMioAccount().removeEvento(dati.getMioAccount().getEvento(i));
-			System.out.println("\nDisiscrizione eseguita con successo");
+			UtilView.visualizzaMessaggio("Disiscrizione eseguita con successo");
 		}
 		else {
-			if(i>=0) System.out.println("\nNon puoi disiscriverti perchè passato il termine");
+			if(i>=0) UtilView.visualizzaMessaggio("Non puoi disiscriverti perchè passato il termine");
 		}
 	}
 	
@@ -94,18 +95,18 @@ public class UtilMenuProfilo {
 	}
 
 	private static void pubblicaEvento(Evento e,Dati dati) {
-		if (e.isPubblicato() || e.getTermineIscrizioni().compareTo(dati.getDataOdierna())>0){
-			System.out.println("\nL'evento non può essere pubblicato perchè già pubblicato o è scaduto il termine iscrizioni");
+		if (e.isPubblicabile(dati)){
+			UtilView.visualizzaMessaggio("L'evento non può essere pubblicato perchè già pubblicato o è scaduto il termine iscrizioni");
 		}
 		else {
 			e.setStato(Stati.aperto);
-			System.out.println("\nLa proposta è stata pubblicata correttamente!");
+			UtilView.visualizzaMessaggio("La proposta è stata pubblicata correttamente!");
 		}
 	}
 
 	private static void ritiraEvento(Evento e,Dati dati) {
-		if (dati.getDataOdierna().compareTo(e.getTermineDisiscrizioni())<0) {
-			System.out.println("\nNon è possibile ritirare questo evento perchè è passata la data di termine disiscrizioni");
+		if (e.isRitirabile(dati)) {
+			UtilView.visualizzaMessaggio("Non è possibile ritirare questo evento perchè è passata la data di termine disiscrizioni");
 		}
 		else {
 			String messaggio = "L'evento "; 
@@ -117,32 +118,22 @@ public class UtilMenuProfilo {
 			dati.getContainer().getPartite().remove(e);
 			e.eventoRitirato(dati.getDataOdierna());
 			dati.getMioAccount().removeProposta(e);
-			System.out.println("\nLa proposta è stata ritirata correttamente");
+			UtilView.visualizzaMessaggio("La proposta è stata ritirata correttamente");
 		}
-	}	
+	}
 
 	private static void vediNuoveNotifiche(Dati dati) {
-	
-		System.out.println(BelleStringhe.incornicia("notifiche: "));
-		for(int i=0; i<dati.getMioAccount().sizeNotifiche();i++) {
-			if (!dati.getMioAccount().getNotifica(i).isLetta()) {
-				System.out.println("\n" +dati.getMioAccount().getNotifica(i).toString());
-				dati.getMioAccount().getNotifica(i).leggi();
-			}
-		}
-		
+		Vector<Notifica> nonLette = dati.getMioAccount().getNotificheNonLette(); 
+		UtilView.visualizzaNotifiche(nonLette);
+		dati.getMioAccount().leggiNotificheNonLette();
 	}
 
 	private static void vediTutteNotifiche(Dati dati) {
-		
-		System.out.println(BelleStringhe.incornicia("notifiche: "));
-		for(int i=0; i<dati.getMioAccount().sizeNotifiche();i++) {
-				System.out.println("\n" + dati.getMioAccount().getNotifica(i).toString());
-		}
+		UtilView.visualizzaNotifiche(dati.getMioAccount().getNotifiche());
 	}
 	
 	private static void modificaProfilo(Dati dati) {
-		System.out.println("\n" + dati.getMioAccount().toString() + "\n");
+		UtilView.visualizzaMessaggio(dati.getMioAccount().toString() + "\n");
 		UtilMenuModProfilo.menuModificaProfilo(dati);
 	}
 

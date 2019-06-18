@@ -39,6 +39,10 @@ public class Account implements Serializable{
 		return notifiche.get(i);
 	}
 	
+	public Vector<Notifica> getNotifiche() {
+		return notifiche;
+	}
+	
 	public void addEvento(Evento e) {
 		eventi.add(e);
 	}
@@ -108,6 +112,28 @@ public class Account implements Serializable{
 		categorieInteresse.remove(s);
 	}
 	
+	public Vector<Notifica> getNotificheNonLette(){
+		Vector<Notifica> nonLette = new Vector<>();
+		
+		for(int i=0; i<sizeNotifiche();i++) {
+			if (!notifiche.get(i).isLetta()) {
+				nonLette.add(notifiche.get(i));
+			}
+		}
+		
+		return nonLette;
+	}
+	
+	public void leggiNotificheNonLette() {
+		
+		for(int i=0; i<sizeNotifiche();i++) {
+			if (!notifiche.get(i).isLetta()) {
+				notifiche.get(i).leggi();
+			}
+		}
+		
+	}
+	
 	public String toString() {
 		StringBuffer s = new StringBuffer();
 		s.append("Nomignolo: " + nomignolo + "\n");
@@ -120,5 +146,6 @@ public class Account implements Serializable{
 		}
 		return s.toString();
 	}
+
 
 }

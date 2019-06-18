@@ -1,4 +1,4 @@
-package Main;
+package Eventi;
 
 public enum Stati {
 	

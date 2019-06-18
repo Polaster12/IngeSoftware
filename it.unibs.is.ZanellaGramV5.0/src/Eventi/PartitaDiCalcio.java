@@ -55,6 +55,18 @@ public class PartitaDiCalcio extends Evento implements Serializable{
 		return fasciaDiEta;
 	}
 	
+	public static boolean controlloObbligatoriet‡PartitaDiCalcio(Object[] valoriBase, Object[] valoriExtra) {
+		boolean result = true;
+		
+		for (int i=0; i<valoriBase.length-1; i++) {
+			if (Evento.getObbligatoriet‡()[i] && valoriBase[i]==null) result=false;
+		}
+		for (int i=0; i<valoriExtra.length; i++) {
+			if (PartitaDiCalcio.getObbligatoriet‡()[i] && valoriExtra[i]==null) result=false;
+		}
+		return result;
+	}
+	
 	public static String toStringCategoria() {
 		
 		StringBuffer s = new StringBuffer(Evento.toStringEvento());

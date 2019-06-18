@@ -6,7 +6,7 @@ import java.util.Vector;
 
 import Account.Account;
 import Account.Notifica;
-import Main.Stati;
+import DBMS.Dati;
 
 import java.io.*;
 import it.unibs.fp.mylib.Data;
@@ -365,6 +365,14 @@ public class Evento implements Serializable {
 	public boolean isPubblicato() {
 		if(stato == Stati.nonpubblico) return false;
 		return true;
+	}
+
+	public boolean isPubblicabile(Dati dati) {
+		return (isPubblicato() || termineIscrizioni.compareTo(dati.getDataOdierna())>0);
+	}
+
+	public boolean isRitirabile(Dati dati) {
+		return dati.getDataOdierna().compareTo(termineDisiscrizione)<0;
 	}
 
 }

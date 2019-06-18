@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import Account.Account;
 import it.unibs.fp.mylib.Data;
-import it.unibs.fp.mylib.FasciaDiEta;
 import it.unibs.fp.mylib.Ora;
 
 public class TorneoDiPoker extends Evento implements Serializable{
@@ -14,7 +13,7 @@ public class TorneoDiPoker extends Evento implements Serializable{
 	public static final String nome = "Torneo di poker";
 	public static final String descrizione = "Torneo concernente il gioco di carte conosciuto come poker";
 	
-	public static final String[] vociSpeseAggiuntive = { "Cibarie", "Bevande", "Gadget" };
+	public static final String[] vociSpeseAggiuntive = {"Cibarie", "Bevande", "Gadget"};
 	
 	private static final boolean[] obbligatoriet‡ = {true,true,false};
 	private static final String[] descrizioni = {
@@ -83,6 +82,18 @@ public class TorneoDiPoker extends Evento implements Serializable{
 		return s.toString();
 	}
 	
+	public static boolean controlloObbligatoriet‡TorneoDiPoker(Object[] valoriBase, Object[] valoriExtra) {
+			boolean result = true;
+			
+			for (int i=0; i<valoriBase.length-1; i++) {
+				if (Evento.getObbligatoriet‡()[i] && valoriBase[i]==null) result=false;
+			}
+			for (int i=0; i<valoriExtra.length; i++) {
+				if (getObbligatoriet‡()[i] && valoriExtra[i]==null) result=false;
+			}
+			return result;
+	}
+
 	public static String toStringCategoria() {
 			
 			StringBuffer s = new StringBuffer(Evento.toStringEvento());
