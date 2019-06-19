@@ -45,16 +45,16 @@ public class UtilMenuPartitaDiCalcio {
 			if (i>=0 && !partiteAperte.get(i).controlloIscrizione(dati.getMioAccount())){
 				partiteAperte.get(i).addPartecipante(dati.getMioAccount());
 				dati.getMioAccount().addEvento(partiteAperte.get(i));
-				UtilView.visualizzaMessaggio("\nIscrizione completata con successo");
+				UtilView.visualizzaMessaggio("Iscrizione completata con successo");
 			}
 			else {
 				if (i>=0 && partiteAperte.get(i).controlloIscrizione(dati.getMioAccount())) {
-					UtilView.visualizzaMessaggio("\nSei gia iscritto!!");
+					UtilView.visualizzaMessaggio("Sei gia iscritto!!");
 				}
 			}
 		}
 		else {
-			UtilView.visualizzaMessaggio("\nNon ci sono Partite di Calcio disponibili");
+			UtilView.visualizzaMessaggio("Non ci sono Partite di Calcio disponibili");
 			menuPartitaDiCalcio(dati);
 		}
 		
@@ -75,12 +75,12 @@ private static void creaPartitaDiCalcio(Dati dati) {
 			dati.getMioAccount().addProposta(p);
 			pubblicazionePartitaDiCalcio(p,dati);
 		}else {
-			UtilView.visualizzaMessaggio("\nAlcuni dei campi obbligatori non sono stati compilati!");
+			UtilView.visualizzaMessaggio("Alcuni dei campi obbligatori non sono stati compilati!");
 		}
 }
 
 private static void pubblicazionePartitaDiCalcio(PartitaDiCalcio p,Dati dati) {
-			if(UtilView.ask("\nVuoi pubblicarlo adesso?(E' possibile la pubblicazione in un secondo momento)-->")){
+			if(UtilView.ask("Vuoi pubblicarlo adesso?(E' possibile la pubblicazione in un secondo momento)-->")){
 				p.setStato(Stati.aperto);
 				UtilInviti.notificaInteressati(p,dati);
 				UtilInviti.inviti(p,dati);

@@ -67,7 +67,7 @@ public class UtilMenuAccesso {
 			i = menu.scegli()-1;
 			if (i>=0){
 				dati.getMioAccount().addCategorieInteresse(altreCategorie.get(i));
-				UtilView.visualizzaMessaggio("\nCategoria aggiunta ai tuoi interessi");
+				UtilView.visualizzaMessaggio("Categoria aggiunta ai tuoi interessi");
 			}
 		} while(i>=0);
 	}

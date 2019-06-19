@@ -38,17 +38,17 @@ public class UtilMenuTorneoPoker {
 		
 		if (TorneoDiPoker.controlloObbligatorietàTorneoDiPoker(valoriBase, valoriExtra)) {
 			TorneoDiPoker p = new TorneoDiPoker(valoriBase, valoriExtra);
-			UtilView.visualizzaMessaggio("\nEvento creato con successo");
+			UtilView.visualizzaMessaggio("Evento creato con successo");
 			p.addPartecipante(dati.getMioAccount());
 			dati.getMioAccount().addProposta(p);
 			pubblicazioneTorneoDiPoker(p,dati);
 		} else {
-			UtilView.visualizzaMessaggio("\nAlcuni dei campi obbligatori non sono stati compilati!");
+			UtilView.visualizzaMessaggio("Alcuni dei campi obbligatori non sono stati compilati!");
 		}
 		
 	}
 	private static void pubblicazioneTorneoDiPoker(TorneoDiPoker p,Dati dati) {
-		if(UtilView.ask("\nVuoi pubblicarlo adesso?(E' possibile la pubblicazione in un secondo momento)-->")){
+		if(UtilView.ask("Vuoi pubblicarlo adesso?(E' possibile la pubblicazione in un secondo momento)-->")){
 			p.setStato(Stati.aperto);
 			UtilInviti.notificaInteressati(p,dati);
 			UtilInviti.inviti(p,dati);
@@ -73,16 +73,16 @@ public class UtilMenuTorneoPoker {
 				aperti.get(i).addAmmontare(aperti.get(i).getQuotaIndividuale());
 				scegliSpeseAggiuntive(aperti.get(i),dati);
 				dati.getMioAccount().addEvento(aperti.get(i));
-				UtilView.visualizzaMessaggio("\nIscrizione completata con successo");
+				UtilView.visualizzaMessaggio("Iscrizione completata con successo");
 			}
 			else {
 				if (i>=0 && aperti.get(i).controlloIscrizione(dati.getMioAccount())) {
-					UtilView.visualizzaMessaggio("\nSei gia iscritto!!");
+					UtilView.visualizzaMessaggio("Sei gia iscritto!!");
 				}
 			}
 		}
 		else {
-			UtilView.visualizzaMessaggio("\nNon ci sono tornei aperti disponibili");
+			UtilView.visualizzaMessaggio("Non ci sono tornei aperti disponibili");
 			menuPoker(dati);
 		}
 }

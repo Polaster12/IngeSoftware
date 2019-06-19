@@ -22,7 +22,7 @@ public class UtilView {
 	}
 	
 	public static boolean ask(String domanda) {
-		return InputDati.yesOrNo(domanda);
+		return InputDati.yesOrNo("\n"+domanda);
 	}
 	
 	public static void visualizzaMessaggio(String messaggio) {
